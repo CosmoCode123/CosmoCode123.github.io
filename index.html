@@ -43,8 +43,8 @@
         </div>
     </nav>
 
-    <!-- Hero Banner Section -->
-    <section class="hero-banner"
+    <!-- Hero Banner Section --> 
+    <section class="hero-banner" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'});"
         style="background-image: url('img/HeroBG2.jpg'); background-size: cover; background-position: center; height: 100vh; margin: 0; padding: 0;">
         <div class="hero-content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
             <h1 class="hero-title text-light">COSMO WONG</h1>
@@ -56,8 +56,8 @@
 
     <!-- Projects Section -->
     <section class="projects-section py-5" id="projects">
-        <div class="container">
-            <h2 class="text-center mb-5">Project</h2>
+        <div class="container mt-5">
+            <h2 class="text-center mb-5">Projects</h2>
             <div class="row justify-content-center">
                 <div class="col-md-4 mb-4">
                     <div class="card h-100">
@@ -101,8 +101,8 @@
     </section>
 
     <!-- About Section (Profile, Objective, Development Plan Combined) -->
-    <section class="about-section py-5" id="About">
-        <div class="container">
+    <section class="about-section about-bg py-5" id="About">
+        <div class="container mt-5">
             <h2 class="text-center mb-5">About</h2>
             <div class="row">
                 <div class="col-md-4 about-sidebar text-center">
@@ -242,6 +242,14 @@
             </div>
         </div>
     </footer>
+
+    <style>
+      .about-bg {
+        background: linear-gradient(135deg, #f8fafc 60%, #dbeafe 100%);
+        /* 柔和藍白漸層，讓 section 有層次感 */
+      }
+      /* 你可以根據喜好調整顏色或透明度 */
+    </style>
 
     <!-- jQuery (before Bootstrap JS) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
