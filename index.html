@@ -25,8 +25,15 @@
             <a class="navbar-brand" href="#page-top">
                 <span class="d-block d-lg-none">Wong Yuk Man Cosmo</span>
                 <span class="d-none d-lg-block">
-                    <img class="img-fluid rounded-circle mb-2" src="https://github.com/CosmoCode123.png"
-                        alt="Cosmo Wong" style="width: 15%;">
+                    <div class="header-profile-container">
+                        <img class="img-fluid rounded-circle mb-2" src="https://github.com/CosmoCode123.png"
+                            alt="Cosmo Wong" style="width: 15%;">
+                        <div class="header-info">
+                            <div class="header-name">Cosmo Wong</div>
+                            <div class="header-title">Software Engineer</div>
+                            <div class="header-status"><i class="fas fa-circle text-success"></i> Available for projects</div>
+                        </div>
+                    </div>
                 </span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -139,6 +146,8 @@
                             role="tab">Objective</a>
                         <a class="nav-link" id="about-plan-tab" data-bs-toggle="pill" href="#about-plan"
                             role="tab">Development Plan</a>
+                        <a class="nav-link" id="about-learning-tab" data-bs-toggle="pill" href="#about-learning"
+                            role="tab">Learning Sessions</a>
                     </div>
                 </div>
                 <div class="col-md-8">
@@ -156,6 +165,70 @@
                             <h4>Development Plan</h4>
                             <p>Continuously improve my skills in modern web development, contribute to open-source
                                 projects, and deliver impactful solutions for users and clients.</p>
+                        </div>
+                        <div class="tab-pane fade" id="about-learning" role="tabpanel">
+                            <h4>Learning Sessions</h4>
+                            <p>Tracking my progress in learning new technologies and skills.</p>
+                            
+                            <div class="learning-sessions">
+                                <div class="learning-session">
+                                    <div class="learning-header">
+                                        <h5>React & Next.js</h5>
+                                        <span class="progress-badge in-progress">In Progress</span>
+                                    </div>
+                                    <div class="progress mb-2">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
+                                    </div>
+                                    <p class="text-muted">Advanced component patterns and server-side rendering</p>
+                                    <div class="learning-milestones">
+                                        <div class="milestone completed">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Basic components and hooks</span>
+                                        </div>
+                                        <div class="milestone completed">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>State management with Redux</span>
+                                        </div>
+                                        <div class="milestone in-progress">
+                                            <i class="fas fa-spinner fa-spin"></i>
+                                            <span>Next.js API routes and SSR</span>
+                                        </div>
+                                        <div class="milestone">
+                                            <i class="far fa-circle"></i>
+                                            <span>Performance optimization</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="learning-session">
+                                    <div class="learning-header">
+                                        <h5>Machine Learning</h5>
+                                        <span class="progress-badge just-started">Just Started</span>
+                                    </div>
+                                    <div class="progress mb-2">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                    <p class="text-muted">Fundamentals of ML algorithms and TensorFlow</p>
+                                    <div class="learning-milestones">
+                                        <div class="milestone completed">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Python basics for ML</span>
+                                        </div>
+                                        <div class="milestone in-progress">
+                                            <i class="fas fa-spinner fa-spin"></i>
+                                            <span>Linear regression and classification</span>
+                                        </div>
+                                        <div class="milestone">
+                                            <i class="far fa-circle"></i>
+                                            <span>Neural networks</span>
+                                        </div>
+                                        <div class="milestone">
+                                            <i class="far fa-circle"></i>
+                                            <span>Deep learning applications</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -511,6 +584,126 @@
     <style>
       .about-bg {
         background: linear-gradient(135deg, #f8fafc 60%, #dbeafe 100%);
+      }
+          /* Header profile styling */
+      .header-profile-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+      
+      .header-info {
+        margin-left: 1rem;
+        text-align: left;
+      }
+      
+      .header-name {
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: white;
+      }
+      
+      .header-title {
+        font-size: 0.9rem;
+        color: #ccc;
+      }
+      
+      .header-status {
+        font-size: 0.8rem;
+        color: #aaa;
+        margin-top: 0.3rem;
+      }
+      
+      .header-status i {
+        font-size: 0.6rem;
+        margin-right: 0.3rem;
+      }
+      
+      /* Learning sessions styling */
+      .learning-sessions {
+        margin-top: 1.5rem;
+      }
+      
+      .learning-session {
+        background: white;
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+      }
+      
+      .learning-session:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(107, 72, 255, 0.15);
+      }
+      
+      .learning-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.8rem;
+      }
+      
+      .learning-header h5 {
+        margin: 0;
+        color: #6b48ff;
+      }
+      
+      .progress-badge {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.7rem;
+        border-radius: 20px;
+        font-weight: 600;
+      }
+      
+      .progress-badge.completed {
+        background-color: #28a745;
+        color: white;
+      }
+      
+      .progress-badge.in-progress {
+        background-color: #fd7e14;
+        color: white;
+      }
+      
+      .progress-badge.just-started {
+        background-color: #17a2b8;
+        color: white;
+      }
+      
+      .learning-milestones {
+        margin-top: 1rem;
+      }
+      
+      .milestone {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+        border-radius: 5px;
+        transition: all 0.2s ease;
+      }
+      
+      .milestone:hover {
+        background-color: #f8f9fa;
+      }
+      
+      .milestone i {
+        margin-right: 0.8rem;
+        font-size: 1rem;
+      }
+      
+      .milestone.completed i {
+        color: #28a745;
+      }
+      
+      .milestone.in-progress i {
+        color: #fd7e14;
+      }
+      
+      .milestone span {
+        font-size: 0.9rem;
       }
     </style>
 
