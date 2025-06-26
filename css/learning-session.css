@@ -1,0 +1,120 @@
+/* Learning sessions styling */
+.learning-sessions {
+  margin-top: 1.5rem;
+}
+
+.learning-session {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.learning-session:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(107, 72, 255, 0.15);
+}
+
+.learning-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.learning-header h5 {
+  margin: 0;
+  color: #6b48ff;
+}
+
+.progress-badge {
+  font-size: 0.7rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.progress-badge.completed {
+  background-color: #28a745;
+  color: white;
+}
+
+.progress-badge.in-progress {
+  background-color: #fd7e14;
+  color: white;
+}
+
+.progress-badge.just-started {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.learning-milestones {
+  margin-top: 1rem;
+}
+
+.milestone {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.milestone:hover {
+  background-color: #f8f9fa;
+}
+
+.milestone i {
+  margin-right: 0.8rem;
+  font-size: 1rem;
+}
+
+.milestone.completed i {
+  color: #28a745;
+}
+
+.milestone.in-progress i {
+  color: #fd7e14;
+}
+
+.milestone span {
+  font-size: 0.9rem;
+}
+
+/* Header profile styling */
+.header-profile-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.header-info {
+  margin-left: 1rem;
+  text-align: left;
+}
+
+.header-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.header-title {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.header-status {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 0.3rem;
+}
+
+.header-status i {
+  font-size: 0.6rem;
+  margin-right: 0.3rem;
+}
