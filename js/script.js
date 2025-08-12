@@ -1,23 +1,33 @@
 
-document.addEventListener('DOMContentLoaded', function() {
-      const scrollTriggers = document.querySelectorAll('.scroll-trigger');
-      scrollTriggers.forEach(trigger => {
-        trigger.addEventListener('click', function(e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href').substring(1);
-          const targetSection = document.getElementById(targetId);
-          if (targetSection) {
-            window.scrollTo({
-              top: targetSection.offsetTop,
-              behavior: 'smooth'
-            });
+    $(document).ready(function() {
+      // Hero banner click scrolls to projects
+      $('.hero-banner').on('click', function() {
+        const $target = $('#projects');
+        if ($target.length) {
+          $('html, body').animate({ scrollTop: $target.offset().top }, 700);
+        }
+      });
+      // Fade-in animation on load and scroll
+      function checkVisibility() {
+        $('.fade-in').each(function() {
+          const rect = this.getBoundingClientRect();
+          if (rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.bottom >= 0) {
+            $(this).addClass('visible');
           }
         });
-      });
-    });
-    
+      }
 
-    $(document).ready(function() {
+      checkVisibility();
+      $(window).on('scroll', checkVisibility);
+
+      // Initialize skill progress bars with animation
+      setTimeout(function() {
+        $('.skill-progress-bar').each(function() {
+          const width = $(this).css('width');
+          $(this).css('width', '0').animate({ width: width }, 1000);
+        });
+      }, 500);
+
       // 切換 About 區塊的 tab
       $('.about-sidebar .nav-link').on('click', function(e) {
         e.preventDefault();
@@ -60,6 +70,13 @@ document.addEventListener('DOMContentLoaded', function() {
             $('.navbar-nav .nav-link[href="#' + $(this).attr('id') + '"]').addClass('active');
           }
         });
+        
+        // Add background to navbar when scrolled
+        if ($(window).scrollTop() > 50) {
+          $('#topNav').addClass('navbar-scrolled');
+        } else {
+          $('#topNav').removeClass('navbar-scrolled');
+        }
       });
       
       // Hover effects for cards
@@ -73,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
       );
       
       // Initialize tooltips
-      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      var tooltipTriggerList = $('[data-bs-toggle="tooltip"]').toArray();
       tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl);
       });

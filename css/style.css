@@ -32,44 +32,42 @@ body {
   flex-shrink: 0; /* Prevents footer from shrinking */
 }
 
-/* Sidebar navigation styling */
-#sideNav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 250px;
-  height: 100%;
-  overflow-y: auto;
-  border-right: 1px solid #d0e0f0; /* Softer border matching theme */
-  background: #000000; /* Black background */
+/* Top navigation styling */
+#topNav {
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  padding: 10px 0;
 }
 
-#sideNav .navbar-brand {
+#topNav.navbar-scrolled {
+  background: #000000; /* Solid black when scrolled */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+#topNav .navbar-brand {
   color: #fff;
   font-weight: 600;
-  text-align: center;
-  padding: 20px;
+  display: flex;
+  align-items: center;
 }
 
-#sideNav .nav-link {
+#topNav .nav-link {
   color: #fff;
-  padding: 12px 15px;
+  padding: 8px 15px;
   font-size: 0.9em;
   letter-spacing: 1px;
   text-transform: uppercase;
-  transition: background-color 0.3s ease, padding-left 0.3s ease;
+  transition: color 0.3s ease;
+  margin: 0 5px;
 }
 
-#sideNav .nav-link:hover {
+#topNav .nav-link:hover {
   color: #00ddeb; /* Cyan accent on hover */
-  background-color: transparent;
 }
 
 /* Main content area */
 .container-fluid {
-  margin-left: 0;
   padding: 20px;
   background-color: #e6f0fa; /* Matching body background */
   min-height: 100vh;
@@ -143,7 +141,7 @@ body {
 
 /* Section styling */
 .content-section {
-  padding: 80px 40px;
+  padding: 100px 40px 80px;
   border-radius: 10px;
   margin-bottom: 20px;
   background-color: #f0e6ff; /* Pale lavender for sections */
@@ -211,18 +209,16 @@ ul li:before {
 
 /* Responsive adjustments */
 @media (max-width: 991px) {
-  #sideNav {
-      position: relative;
-      width: 100%;
-      height: auto;
-      border-right: none;
-      padding-bottom: 20px;
+  #topNav {
+      padding: 5px 0;
   }
   .container-fluid {
-      margin-left: 0;
       padding: 10px;
   }
   .content-section {
       padding: 40px 20px;
+  }
+  .hero-banner {
+      margin-top: 56px; /* Account for navbar height on mobile */
   }
 }
